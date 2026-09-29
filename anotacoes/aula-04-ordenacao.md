@@ -53,7 +53,7 @@ Forma an + b, função linear de n: **O(n)**.
 **Pior caso (invertido):** cada elemento anda até o começo, então tᵢ = i.
 
 ```
-T(n) = (c₄/2 + c₅/2 + c₆/2) n² + (c₁ + c₂ + c₃ + c₄/2 + c₅/2 + c₆/2 + c₇) n − (c₂ + c₃ + c₄ + c₇)
+T(n) = (c₄/2 + c₅/2 + c₆/2) n² + (c₁ + c₂ + c₃ + c₄/2 − c₅/2 − c₆/2 + c₇) n − (c₂ + c₃ + c₄ + c₇)
 ```
 
 Forma an² + bn + c, função quadrática de n: **O(n²)**.
@@ -164,3 +164,5 @@ diferença.
 - Achei que BubbleSort com vetor ordenado seria rápido. Não é, sem parada
   antecipada ele compara tudo.
 - Achei que o vetor invertido era o pior caso do MergeSort. Não é.
+- Errei o sinal no T(n) do pior caso da inserção: o c₅/2 e o c₆/2 entram com
+  menos no termo do n, porque n(n−1)/2 = n²/2 − n/2.
